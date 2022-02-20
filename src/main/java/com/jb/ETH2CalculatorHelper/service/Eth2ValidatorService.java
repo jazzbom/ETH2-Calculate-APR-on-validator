@@ -47,7 +47,7 @@ public class Eth2ValidatorService {
 		long t0 = System.currentTimeMillis();
 		log.debug("calculateAPRForValidator begin calc: Validator {} at time {}", index, t0);
 		
-		BigDecimal apr = BigDecimal.ZERO;
+		BigDecimal apr = null;
 		CompletableFuture<BigInteger> fcurrentNetworkEpoch = getEpochOfFinalizedChain();
 		CompletableFuture<BigDecimal> fcurrentBalanceOfValidator = getValidatorBalance(index, "finalized", "active_ongoing");
 		CompletableFuture.allOf(fcurrentNetworkEpoch, fcurrentBalanceOfValidator);
