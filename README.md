@@ -1,7 +1,7 @@
 # ETH2-Calculate-APR-on-validator
 A simple analytical tool for Ethereum 2.0 designed to return a validator's staking APR. 
 
-Calculations performed by looking at the chain data of Validator's node.
+Calculations performed by looking at the chain data of Validator node.
 
 ### Built With
 Java 11 
