@@ -3,6 +3,7 @@ package com.jb.ETH2CalculatorHelper;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +24,8 @@ class Eth2CalculatorHelperApplicationTests {
 
 	@Test
 	void testCalculateAPRForValidator() throws WebClientResponseException, IOException {
-		double apr = eth2ValidatorService.calculateAPRForValidator(33548l, 31536000l);
-		assertTrue(apr != 0.00, "Passed");
+		BigDecimal apr = eth2ValidatorService.calculateAPRForValidator(33548l, 31536000l);
+		assertTrue(apr != null, "Passed");
 	}
 	
 }
