@@ -1,6 +1,7 @@
 package com.jb.ETH2CalculatorHelper.controller;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,8 +28,8 @@ public class ServiceController {
 	private Eth2ValidatorService eth2ValidatorService;
 	
 	@RequestMapping(value = "/validator/{index}", method = RequestMethod.POST, produces = "application/json")
-	public @ResponseBody Map<String, Object> calculateAPRForValidator(@PathVariable long index,
-			@RequestParam(required = true) long ageInSeconds) {
+	public @ResponseBody Map<String, Object> calculateAPRForValidator(@PathVariable BigInteger index,
+			@RequestParam(required = true) BigInteger ageInSeconds) {
 		log.debug("calculateAPRForValidator index: {}, ageLookUp: {}", index, ageInSeconds);
 		Map<String, Object> result = new HashMap<String, Object>(2);
 		result.put("success", false);
