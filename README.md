@@ -3,7 +3,7 @@ A simple analytical tool for Ethereum 2.0 designed to return a validator's staki
 
 Calculations performed by looking at the chain data of Validator's node.
 
-####Built With
+### Built With
 Java 11 
 
 Spring boot 2.5.9
@@ -14,7 +14,7 @@ Swagger
 
 infura.io to access Beacon chain data via their API.
  
-##HowTo
+### HowTo
 
 * Select & activate a Maven profile within the resources dir.
 * Update the application.properties file with your Infura.io ETH2 API credentials.
